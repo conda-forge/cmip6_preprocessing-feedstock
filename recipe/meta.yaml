@@ -1,5 +1,5 @@
 {% set name = "cmip6_preprocessing" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d34fa682b53fd353ef83c7cddddb174e26e1ecfc63cbccbac99e6157f2370750
+  sha256: 68737e9ba5918a89de724c12b8c26cb655bd7466cea5348f48244094ea1a6a31
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -34,7 +34,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Some code to homogenize naming and parse variables in a xgcm compatible xarray dataset'
+  summary: Some code to homogenize naming and parse variables in a xgcm compatible xarray dataset
 
   description: |
     Frustrated with how 'dirty' CMIP6 data still is? Do you just want to run a
