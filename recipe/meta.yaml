@@ -33,7 +33,7 @@ about:
   home: https://github.com/jbusecke/cmip6_preprocessing
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file: LICENSE.txt
   summary: Some code to homogenize naming and parse variables in a xgcm compatible xarray dataset
 
   description: |
