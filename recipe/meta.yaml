@@ -1,5 +1,5 @@
 {% set name = "cmip6_preprocessing" %}
-{% set version = "0.1.4" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5f6c2a71580e2d68cc624b436150f4a77a9ddaa5f82d0e35abaf0c8215037467
+  sha256: 0521ed8ee2d78fa6e4a100d05151181c15043ad90b4a04b668b9fbaba4ed8842
 
 build:
   noarch: python
