@@ -19,11 +19,13 @@ requirements:
     - python >=3.7
     - pip
     - pytest-runner
+    - setuptools_scm
   run:
     - python >=3.7
     - xarray
     - pandas
     - numpy
+    - importlib-metadata
 
 test:
   imports:
@@ -36,7 +38,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: Some code to homogenize naming and parse variables in a xgcm compatible xarray dataset
+  summary: Some code to homogenize naming and parse variables in an xgcm compatible xarray dataset
 
   description: |
     Frustrated with how 'dirty' CMIP6 data still is? Do you just want to run a
