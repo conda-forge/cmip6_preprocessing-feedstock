@@ -25,7 +25,7 @@ requirements:
     - xarray
     - pandas
     - numpy
-    - importlib-metadata
+    - importlib-metadata  # Only need for Python < 3.8 (but doesn't hurt on other versions) I think so could be removed in future
 
 test:
   imports:
