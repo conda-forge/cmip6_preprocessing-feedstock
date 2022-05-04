@@ -28,6 +28,8 @@ requirements:
 test:
   imports:
     - cmip6_preprocessing
+    
+  commands: python -c "import cmip6_preprocessing; assert cmip6_preprocessing.__version__ == '{{ version }}', cmip6_preprocessing.__version__"
 
 about:
   home: https://github.com/jbusecke/cmip6_preprocessing
