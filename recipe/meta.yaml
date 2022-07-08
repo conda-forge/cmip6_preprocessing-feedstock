@@ -1,5 +1,5 @@
-{% set name = "cmip6_preprocessing" %}
-{% set version = "0.5.0" %}
+{% set name = "xmip" %}
+{% set version = "0.6.1rc0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b1cf9773d5d96398e4557ddfd3f2d129971ee7742e6eb00c304db6d289c0d367
+  sha256: 614c10c9ced1584f911b23bbf02b333c470d7c9a9cf597c105d09ee6446f0695
 
 build:
   noarch: python
@@ -25,16 +25,17 @@ requirements:
     - xarray
     - pandas
     - numpy
+    - pint-xarray
     - importlib-metadata  # Only need for Python < 3.8 (but doesn't hurt on other versions) I think so could be removed in future
 
 test:
   imports:
-    - cmip6_preprocessing
+    - xmip
     
-  commands: python -c "import cmip6_preprocessing; assert cmip6_preprocessing.__version__ == '{{ version }}', cmip6_preprocessing.__version__"
+  commands: python -c "import xmip; assert xmip.__version__ == '{{ version }}', xmip.__version__"
 
 about:
-  home: https://github.com/jbusecke/cmip6_preprocessing
+  home: https://github.com/jbusecke/xMIP
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
