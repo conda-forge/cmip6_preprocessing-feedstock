@@ -1,7 +1,7 @@
-About cmip6_preprocessing
-=========================
+About xMIP (formerly cmip6_preprocessing)
+=========================================
 
-Home: https://github.com/jbusecke/cmip6_preprocessing
+Home: https://github.com/jbusecke/xMIP
 
 Package license: MIT
 
