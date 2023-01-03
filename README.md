@@ -1,13 +1,13 @@
-About xMIP (formerly cmip6_preprocessing)
-=========================================
+About xmip
+==========
 
 Home: https://github.com/jbusecke/xMIP
 
 Package license: MIT
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cmip6_preprocessing-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cmip6_preprocessing-feedstock/blob/main/LICENSE.txt)
 
-Summary: Some code to homogenize naming and parse variables in a xgcm compatible xarray dataset
+Summary: Some code to homogenize naming and parse variables in an xgcm compatible xarray dataset
 
 Development: https://github.com/jbusecke/cmip6_preprocessing
 
@@ -25,8 +25,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9169&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cmip6_preprocessing-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9169&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cmip6_preprocessing-feedstock?branchName=main">
       </a>
     </td>
   </tr>
@@ -37,35 +37,61 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-cmip6_preprocessing-green.svg)](https://anaconda.org/conda-forge/cmip6_preprocessing) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cmip6_preprocessing.svg)](https://anaconda.org/conda-forge/cmip6_preprocessing) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cmip6_preprocessing.svg)](https://anaconda.org/conda-forge/cmip6_preprocessing) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cmip6_preprocessing.svg)](https://anaconda.org/conda-forge/cmip6_preprocessing) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-xmip-green.svg)](https://anaconda.org/conda-forge/xmip) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/xmip.svg)](https://anaconda.org/conda-forge/xmip) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/xmip.svg)](https://anaconda.org/conda-forge/xmip) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/xmip.svg)](https://anaconda.org/conda-forge/xmip) |
 
-Installing cmip6_preprocessing
-==============================
+Installing xmip
+===============
 
-Installing `cmip6_preprocessing` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `xmip` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `cmip6_preprocessing` can be installed with:
+Once the `conda-forge` channel has been enabled, `xmip` can be installed with `conda`:
 
 ```
-conda install cmip6_preprocessing
+conda install xmip
 ```
 
-It is possible to list all of the versions of `cmip6_preprocessing` available on your platform with:
+or with `mamba`:
 
 ```
-conda search cmip6_preprocessing --channel conda-forge
+mamba install xmip
+```
+
+It is possible to list all of the versions of `xmip` available on your platform with `conda`:
+
+```
+conda search xmip --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search xmip --channel conda-forge
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search xmip --channel conda-forge
+
+# List packages depending on `xmip`:
+mamba repoquery whoneeds xmip --channel conda-forge
+
+# List dependencies of `xmip`:
+mamba repoquery depends xmip --channel conda-forge
 ```
 
 
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -75,10 +101,12 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
@@ -100,17 +128,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating cmip6_preprocessing-feedstock
-======================================
+Updating xmip-feedstock
+=======================
 
-If you would like to improve the cmip6_preprocessing recipe or build a new
+If you would like to improve the xmip recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/cmip6_preprocessing-feedstock are
+Note that all branches in the conda-forge/xmip-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.

@@ -1,5 +1,6 @@
 {% set name = "xmip" %}
-{% set version = "0.6.1rc0" %}
+{% set version = "0.7.0" %}
+{% set hash = "98e6741384838b144cd5b9144df66c07d01efcb4a83bdf0477071863bd027042" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 614c10c9ced1584f911b23bbf02b333c470d7c9a9cf597c105d09ee6446f0695
+  sha256: {{ hash }}
 
 build:
   noarch: python
