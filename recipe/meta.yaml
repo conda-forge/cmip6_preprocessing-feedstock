@@ -1,6 +1,6 @@
 {% set name = "xmip" %}
 {% set version = "0.7.0" %}
-{% set hash = 98e6741384838b144cd5b9144df66c07d01efcb4a83bdf0477071863bd027042 %}
+{% set hash = "98e6741384838b144cd5b9144df66c07d01efcb4a83bdf0477071863bd027042" %}
 
 package:
   name: {{ name|lower }}
