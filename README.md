@@ -154,4 +154,3 @@ Feedstock Maintainers
 =====================
 
 * [@jbusecke](https://github.com/jbusecke/)
-
