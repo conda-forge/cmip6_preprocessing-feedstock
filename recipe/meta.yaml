@@ -20,6 +20,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - pytest-runner
+    - setuptools
     - setuptools_scm
   run:
     - python >={{ python_min }}
