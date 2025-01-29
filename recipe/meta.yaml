@@ -7,22 +7,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ hash }}
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - pytest-runner
+    - setuptools
     - setuptools_scm
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - xarray
     - pandas
     - numpy
@@ -30,6 +31,8 @@ requirements:
     - importlib-metadata  # Only need for Python < 3.8 (but doesn't hurt on other versions) I think so could be removed in future
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - xmip
 
